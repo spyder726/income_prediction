@@ -13,7 +13,7 @@ cols=['age','workclass','education','marital-status','occupation','relationship'
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET','POST'])
 def predict():
     feature_list = request.form.to_dict()
     feature_list = list(feature_list.values())
